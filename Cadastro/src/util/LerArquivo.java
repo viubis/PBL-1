@@ -15,6 +15,8 @@ public class LerArquivo {
         String l;
         String[] config = new String[2];
         
+        System.out.println("teste");
+        
         for (int i = 0; i < 2; i++) {
             l = read.readLine();
             config[i] = l;
