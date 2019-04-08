@@ -10,8 +10,8 @@ import java.util.LinkedList;
 import model.Administrador;
 import model.Carro;
 import model.Piloto;
-import model.Usuario;
 import util.LerArquivo;
+import model.Circuito;
 
 /**
  *
@@ -21,8 +21,8 @@ public class Controller {
     String[] config;
     LinkedList<Piloto> pilotos = new LinkedList<>();
     LinkedList<Carro> carros = new LinkedList<>();
-    LinkedList<Usuario> usuarios = new LinkedList<>();
     LinkedList<Administrador> administradores = new LinkedList<>(); 
+    LinkedList<Circuito> circuitos = new LinkedList<>();
     private boolean conexao = true;
     
     
@@ -42,14 +42,17 @@ public class Controller {
         carros.add(carro);
     }
     
-    public void adicionarUsuario(int identificador, String nome){
-        Usuario usuario = new Usuario(identificador,nome); 
-        usuarios.add(usuario);
-    }
+   
     
     public void adicionarAdministrador (int identificador, String usuario, String senha){
         Administrador administrador = new Administrador(identificador,usuario,senha);
         administradores.add(administrador);
     }
-
+    
+    public void adicionarCircuito(String nome, int voltas, int voltaRapida, LinkedList<Object> list){
+        
+        Circuito circ = new Circuito(nome, voltas, voltaRapida, list);
+        circuitos.add(circ);
+        
+    }
 }
