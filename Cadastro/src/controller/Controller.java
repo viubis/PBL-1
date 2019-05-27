@@ -6,6 +6,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.LinkedList;
 import model.Administrador;
 import model.Carro;
@@ -49,10 +50,30 @@ public class Controller {
         administradores.add(administrador);
     }
     
-    public void adicionarCircuito(String nome, int voltas, int voltaRapida, LinkedList<Object> list){
+    public void adicionarCircuito(String nome, int voltas){
         
-        Circuito circ = new Circuito(nome, voltas, voltaRapida, list);
+        Circuito circ = new Circuito(nome, voltas);
         circuitos.add(circ);
         
+    }
+    
+    public void adicionarVoltaRapida(Circuito circ, int voltR){
+        
+        circ.setVoltMaisRapida(voltR);
+        
+    }
+    
+    public Iterator listarPilotos(){
+        
+        Iterator itr = pilotos.iterator();
+        
+        return itr;
+    }
+    
+    public Piloto buscarPorIndice(int x){
+        
+        Piloto p = pilotos.get(1);
+        
+        return p;
     }
 }

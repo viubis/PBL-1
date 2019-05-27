@@ -15,7 +15,11 @@ public class Piloto {
     private int idade;
 
     public Piloto(String nome, String equipe, int idade) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        this.nome = nome;
+        this.equipe = equipe;
+        this.idade = idade;
+        
     }
 
     public String getNome() {

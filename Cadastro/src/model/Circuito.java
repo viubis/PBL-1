@@ -16,13 +16,12 @@ public class Circuito {
     private String nomeCircuito;
     private int voltas ;
     private int voltMaisRapida;
-    private LinkedList<Object> listaCarros;
+  
     
-    public Circuito( String nome ,int volt, int vMR, LinkedList<Object> lisC ){
-            nomeCircuito = nome;
-            voltas = volt;
-            nomeCircuito = nome;
-            listaCarros = lisC;
+    public Circuito( String nome ,int volt){
+          this.nomeCircuito = nome;
+          this.voltas = volt;
+            
         
         
     }
@@ -39,9 +38,6 @@ public class Circuito {
         return voltMaisRapida;
     }
 
-    public LinkedList<Object> getListaCarros() {
-        return listaCarros;
-    }
 
     public void setNomeCircuito(String nomeCircuito) {
         this.nomeCircuito = nomeCircuito;
@@ -55,14 +51,12 @@ public class Circuito {
         this.voltMaisRapida = voltMaisRapida;
     }
 
-    public void setListaCarros(LinkedList<Object> listaCarros) {
-        this.listaCarros = listaCarros;
-    }
-
     @Override
     public String toString() {
-        return "Circuito{" + "nomeCircuito=" + nomeCircuito + ", voltas=" + voltas + ", voltMaisRapida=" + voltMaisRapida + ", listaCarros=" + listaCarros + '}';
+        return "Circuito{" + "nomeCircuito=" + nomeCircuito + ", voltas=" + voltas + ", voltMaisRapida=" + voltMaisRapida + '}';
     }
+
+   
     
     
 }
